@@ -82,7 +82,22 @@
 		gtag('config', 'G-NWKDCW3WM7');
 	</script>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri() . '/css/animate.css'); ?>" />
+
+      <script src="http://wowjs.uk/dist/wow.min.js"></script>
+                  <script>
+                  wow = new WOW(
+               {
+                 animateClass: 'animated',
+                 offset:       100,
+                 callback:     function(box) {
+                   // console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                 }
+               }
+             );
+             wow.init();
+
+               </script>
 
 	<?php wp_head(); ?>
 </head>
@@ -167,13 +182,13 @@
 											SEO where part of my responsibility.
 										</p>
 
-										<p>I worked in differents agencies such as: iconosur.com & Beapp.net, ID4You and many others in Argentina and abroad.</p>
+										<!-- <p>I worked in differents agencies such as: iconosur.com & Beapp.net, ID4You and many others in Argentina and abroad.</p> -->
 
-										<p>
+										<!-- <p>
 											Latley to expand my knolege I have programming <a href="https://www.arduino.cc/" class="" target="_blank" title="Arduino">Arduino <i class="demo-icon icon-link-ext"></i></a> projects, 3D Printing and
 											3d projects in Blender, PWA for timing rounds, exploring videogames making (Unity) my
 											own Drawing App or this very background (<a href="https://processing.org/" class="" target="_blank" title="Processing">Processing <i class="demo-icon icon-link-ext"></i></a>)
-										</p>
+										</p> -->
 
 									</div>
 								</article>
@@ -188,13 +203,12 @@
 
 						<!-- second-row -->
 						<div class="row justify-content-center align-items-stretch about second-row">
-
-							<div class=" col-sm-12 col-md-4 bttt me-2 ">
+							<div class=" col-sm-12 col-md-4   ">
 								<div class="row ">
-									<div class="col-3  border-top  text-center">
-										<h3 class="animate__animated animate__bounce">UX</h3>
+									<div class="col-3   border-top  text-center">
+										<h3>UX</h3>
 									</div>
-									<div class="col   border-top">
+									<div class="col   me-2 pe-0 border-top">
 										<ul class="pt-3">
 											<li class="clearfix"> <a href="#" onclick="$('.Works').slideto({highlight: false}); triggerPopupSlide('slider-id-philips')" title="Philips">Philips</a> </li>
 											<li class="clearfix"> <a href="#" onclick="$('.Works').slideto({highlight: false}); triggerPopupSlide('slider-id-banco')" title="Banco Promociones">Banco Promociones</a> </li>
@@ -206,9 +220,9 @@
 								</div>
 							</div>
 
-							<div class=" col-sm-12 col-md-4 bttt ms-2">
+							<div class=" col-sm-12 col-md-4  ">
 								<div class="row">
-									<div class="col-3 border-top text-center">
+									<div class="col-3 ms-2 pse-0 border-top text-center">
 										<h3>UI</h3>
 									</div>
 									<div class="col  border-top">
@@ -228,12 +242,12 @@
 
 						<!-- third-row -->
 						<div class="row justify-content-center  about third-row ">
-							<div class="  col-sm-12 col-md-4 bttt   me-2">
+							<div class="  col-sm-12 col-md-4    ">
 								<div class="row">
 									<div class=" col col-sm-10 col-md-6  col-lg-7  col-xl-7  col-xxl-4  border-top  text-md-left text-lg-center">
 										<h3 class="front">Front-end</h3>
 									</div>
-									<div class="col border-top">
+									<div class="col border-top   me-2 pe-0 ">
 										<ul class="pt-3 ">
 											<li class="clearfix"> <a href="#" onclick="$('.Works').slideto({highlight: false}); triggerPopupSlide('slider-id-Urgente24')" title="JuntosBien">Urgente24</a> </li>
 											<li class="clearfix"> <a href="#" onclick="$('.Works').slideto({highlight: false}); triggerPopupSlide('slider-id-JuntosBien')" title="JuntosBien">JuntosBien</a> </li>
@@ -244,9 +258,9 @@
 							</div>
 
 
-							<div class=" col-sm-12  col-md-4 bttt  ms-2">
+							<div class=" col-sm-12  col-md-4   ">
 								<div class="row  ">
-									<div class="col-3 border-top text-center">
+									<div class="col-3 border-top   ms-2 ps-0 text-center">
 										<h3>Art</h3>
 									</div>
 									<div class="col border-top">
@@ -310,13 +324,13 @@
 
 	<!-- Works -->
 	<!-- <div class="Works_guide"></div> -->
-	<div class="container works section Works" id="Works">
+	<div class="container works section Works  wow fadeInDown   " id="Works">
 
 		<div class="row">
 			<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></header>
 		</div>
 		<div class="row">
-			<div class="container">
+			<div class="container ">
 
 				<div class="row   justify-content-md-center">
 					<script>
@@ -346,7 +360,7 @@
 										 <?php echo get_bloginfo() ?>
 									-->
 
-							<article class="col-6  col-md-4  px-3 px-sm-3 px-md-3 slider-id-<?php echo get_post_meta(get_the_ID(), "anchorid", true) ?>" onclick="triggerPopupSlide('slider-id-<?php echo get_post_meta(get_the_ID(), "anchorid", true) ?>')" data-position="<?php echo get_post_meta(get_the_ID(), 'position', true); ?>" id="<?php echo get_post_meta(get_the_ID(), 'anchorid', true); ?>">
+							<article class="col-6 wow animated fadeInUp  col-md-4  px-3 px-sm-3 px-md-3 slider-id-<?php echo get_post_meta(get_the_ID(), "anchorid", true) ?>" onclick="triggerPopupSlide('slider-id-<?php echo get_post_meta(get_the_ID(), "anchorid", true) ?>')" data-position="<?php echo get_post_meta(get_the_ID(), 'position', true); ?>" id="<?php echo get_post_meta(get_the_ID(), 'anchorid', true); ?>">
 								<!-- <h3><?php the_title(); ?> </h3> -->
 								<div class="front-image"><?php the_post_thumbnail(); ?> </div>
 
