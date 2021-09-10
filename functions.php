@@ -55,19 +55,36 @@ add_action('after_setup_theme', 'ariel2020_setup');
 
 
 
-// add_filter('the_content', 'ariel2020_onlyimages');
-
-add_action('the_content', 'ariel2020_onlyimages');
+add_filter('the_content', 'ariel2020_onlyimages');
 
 function ariel2020_onlyimages($the_content)
 {
-    echo '<script>';
-    echo 'console.log('. json_encode(in_category('works')) .')';
-    echo '</script>';
+
+
+    // echo '<script>';
+    // echo 'console.log('. json_encode(in_category('works')) .')';
+    // echo '</script>';
 
     if (in_category('works')) {
         preg_match_all("#<figure.*</figure\>#", $the_content, $matches);
+        //  preg_match("#<img(.+?)src=(.+?)\/>#", $the_content, $matches);
+        /** $matches is an array, $matches[0] holds the img code */
+        // echo $matches[0];
+
+
+        // g$atoarray ='';
+        // for ($i = 0 ; $i < count($matches) ; $i++) {
+
+
+        //     for ($j=0; $j <  count($matches[$i]); $j++) {
+        //         $gatoarray  .= '<li class="splide__slide">'.$matches[$i][$j].'<li>';
+        //     }
+
+        //     // $gatoarray  .= '<img ' .  $matches[$i][$i];
+        // }
+
         $gatoarray = '';
+
         for ($j = 0; $j < count($matches); $j++) {
 
             for ($i = 0; $i < count($matches[$j]); $i++) {
@@ -78,7 +95,13 @@ function ariel2020_onlyimages($the_content)
     } else {
         $gatoarray  = $the_content;
     }
+
+
     return  $gatoarray;
+    // return  $gatoarray;
+    // return  implode ( $matches );
+
+
 }
 
 
@@ -116,8 +139,7 @@ function ariel2020_onlyimages($the_content)
 
 
 
-function my_widget()
-{
+function my_widget_place(){
     register_sidebar(array(
         'name' => __('Front Sidebar', 'yourtheme'),
         'id' => 'sidebar-1',
@@ -128,7 +150,9 @@ function my_widget()
         'after_title' => '</h3>',
     ));
 }
-add_action('widgets_init', 'my_widget');
+
+
+add_action('widgets_init', 'my_widget_place');
 
 
 
@@ -136,14 +160,19 @@ add_action('widgets_init', 'my_widget');
 
 
 
-function register_my_nav_bar()
-{
+function register_my_nav_bar(){
     register_nav_menu('my_new_menu', __('Our new menu'));
 }
 
 add_action('init', 'register_my_nav_bar');
 
-
+// 
+// function curator($the_content-param){
+//
+//
+//
+// return
+// }
 
 
 

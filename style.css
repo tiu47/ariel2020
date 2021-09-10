@@ -103,9 +103,11 @@ h2{font: normal 65px/58px Abel, sans-serif;color: #fff;}
 .intro{overflow: hidden;display: block;/* padding: 0 0 0; *//* background: url(http://38.media.tumblr.com/7a7c42e999a453ae9820e24f9d77b5cf/tumblr_n7bzulT8Gc1r8l821o1_500.gif); *//* background: url(http://49.media.tumblr.com/96888a8e4ca3c92d1c414b56fd501762/tumblr_n3qqt0KN191qbt59oo1_500.gif); *//* background-size: contain; *//* background: #000 url(http://38.media.tumblr.com/60ec4dbe4fce5552a7110aa71ff20461/tumblr_mwahctJlnI1qc0s10o1_500.gif) center no-repeat; */background-size: cover;}
 
 
-#webpageline{z-index: 0;width: 100% !important;height: 100% !important;position: absolute;position: fixed;filter: blur(3px) hue-rotate(131deg);opacity: .2;}
+#webpageline{z-index: 0;width: 100% !important;height: 100% !important;position: absolute;position: fixed;filter: blur(3px) hue-rotate(131deg);opacity: .5;/* DISPLAY: NONE !IMPORTANT; */}
 
-.person{z-index:111000;position:fixed;top:0;width: 100%;}
+.person{z-index:11199;position:fixed;top:0;width: 100%;}
+
+.wpadminbar{z-index:111999;position:fixed;top:0;width: 100%;}
 
 .works{height: auto;COLOR: #FFF;}
 .works h2{font: normal 4.5rem/1em Abel, sans-serif;padding: 0px 0 30px;text-align: center;}
@@ -345,8 +347,9 @@ video{width: 100%;height: 100%  !important;margin-top: 0;top: 0;left: 0;bottom: 
 .border-top,
 .border-bottom {
   border-color: #9683b2 !important;
-  border-color: #0b5a69 !important;
-  border-color: #8a6837 !important;
+    border-color: #0b5a69 !important;
+   border-color: #8a6837 !important;
+
 }
 
 .row.about.third-row{min-height: 67px;line-height: 32px;font-size: 24px;}
@@ -402,8 +405,8 @@ p.smallsub {}
 	bottom: 64px;
 	left:50%;
 	padding-bottom: 8px;
-	transition:all 1s ease;
-	margin-left: -23px;
+transition:all 1s ease;
+
 	}
 .scrolldown{
 
